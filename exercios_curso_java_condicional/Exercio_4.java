@@ -16,14 +16,20 @@ public class Exercio_4 {
 		System.out.println("|----------------------------------------|");
 		System.out.println("");
 		
-		int codigoDigitado, unidadeDigitadas;
+		int codigoDigitado =0, unidadeDigitadas =0;
 		
 		Scanner leitura = new Scanner(System.in);
 		
-		System.out.print("Digite o código do produto: " );
-		codigoDigitado = leitura.nextInt();
-		System.out.print("Digite a quantidade UNIDADE do produto: " );
-		unidadeDigitadas = leitura.nextInt();
+		
+		try {
+			System.out.print("Digite o código do produto: " );
+			codigoDigitado = leitura.nextInt();
+			System.out.print("Digite a quantidade UNIDADE do produto: " );
+			unidadeDigitadas = leitura.nextInt();
+		} catch (Exception e) {
+			System.out.println("Somente valores númericos podem ser digitados");
+			System.out.println(e);
+		}
 		
 		leitura.close();
 		

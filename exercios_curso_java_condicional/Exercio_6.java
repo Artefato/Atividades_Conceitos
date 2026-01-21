@@ -24,13 +24,19 @@ public class Exercio_6 {
 		System.out.println("|___________________________|");
 		System.out.println();
 		
-		double x, y;
+		double x = 0 , y =0;
 		Scanner leitura = new Scanner(System.in);
-		System.out.print("Digite a posição X: ");
-		x = leitura.nextDouble();
-		System.out.print("Digite a posição y: ");
-		y = leitura.nextDouble();
-		leitura.close();
+
+		try {
+			System.out.print("Digite a posição X: ");
+			x = leitura.nextDouble();
+			System.out.print("Digite a posição y: ");
+			y = leitura.nextDouble();
+			leitura.close();
+		} catch (Exception e) {
+			System.out.println("Somente valores númericos podem ser digitados");
+			System.out.println(e + "Lembrar que tem ");
+		}
 		
 		if(x > 0 && y > 0) {
 			System.out.println("Q1");
@@ -45,7 +51,5 @@ public class Exercio_6 {
 		}else {
 			System.out.println("Erro desconhecido");
 		}
-		
 	}
-
 }
